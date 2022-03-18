@@ -4,5 +4,5 @@ const port = 8080;
 
 
 app.listen(port, () => {
-	console.log(`server is running on port ${port}`);
+	console.log(`server is running test on port ${port}`);
 });

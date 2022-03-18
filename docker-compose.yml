@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+    jobs-view-docker:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: base
+        volumes:
+            - ./src:/home/node/app/src
+            - ./nodemon.json:/home/node/app/nodemon.json
+        container_name: jobs-view-docker
+        expose:
+            - "8080"
+        ports:
+            - "8080:8080"
+        command: npm run dev
